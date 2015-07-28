@@ -1201,7 +1201,7 @@
             grid_y_lines: [],
             grid_y_ticks: 10,
             grid_focus_show: true,
-            grid_lines_front: true,
+            grid_lines_front: false,
             // point - point of each data
             point_show: true,
             point_r: 2.5,
