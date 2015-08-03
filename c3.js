@@ -3548,14 +3548,14 @@
         if (config.grid_y_show) {
             $$.grid.append('g').attr('class', CLASS.ygrids);
         }
+        $$.xgrid = d3.selectAll([]);
+        if (!config.grid_lines_front) { $$.initGridLines(); }
         if (config.grid_focus_show) {
-            $$.grid.append('g')
+            $$.main.append('g')
                 .attr("class", CLASS.xgridFocus)
                 .append('line')
                 .attr('class', CLASS.xgridFocus);
         }
-        $$.xgrid = d3.selectAll([]);
-        if (!config.grid_lines_front) { $$.initGridLines(); }
     };
     c3_chart_internal_fn.initGridLines = function () {
         var $$ = this, d3 = $$.d3;
